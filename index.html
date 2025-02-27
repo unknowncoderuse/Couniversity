@@ -1,17 +1,65 @@
-<!-- Google Calendar Appointment Scheduling begin -->
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<script>
-(function() {
-  var target = document.currentScript;
-  window.addEventListener('load', function() {
-    calendar.schedulingButton.load({
-      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0306kuaY6MLpdB8wH8rvz1t2n6epi0LMtuDgAHkwK3pXjPshg10YiIWDMvpBEc2zf6z7aVBg_F?gv=true',
-      color: '#039BE5',
-      label: 'Book an appointment',
-      target,
-    });
-  });
-})();
-</script>
-<!-- end Google Calendar Appointment Scheduling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Appointment</title>
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74ABE2, #5563DE);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    p {
+      font-size: 1.2em;
+      margin-top: 5px;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome!</h1>
+    <p>Ready to book an appointment? Let's get you scheduled!</p>
+  </header>
+  <div class="container">
+    <!-- Google Calendar Appointment Scheduling begin -->
+    <script>
+      (function() {
+        var target = document.currentScript;
+        window.addEventListener('load', function() {
+          calendar.schedulingButton.load({
+            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0306kuaY6MLpdB8wH8rvz1t2n6epi0LMtuDgAHkwK3pXjPshg10YiIWDMvpBEc2zf6z7aVBg_F?gv=true',
+            color: '#039BE5',
+            label: 'Book an appointment',
+            target,
+          });
+        });
+      })();
+    </script>
+    <!-- end Google Calendar Appointment Scheduling -->
+  </div>
+</body>
+</html>
